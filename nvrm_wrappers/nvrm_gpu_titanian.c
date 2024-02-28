@@ -7,6 +7,18 @@ typedef enum {
     NvSuccess = NvError_Success,
 } NvError;
 
+extern NvError NvRmGpuDeviceGetBufferInfo(NvRmGpuDevice *hDevice) {
+    fprintf(stderr, "nvrm_gpu_titanian: WARNING: NvRmGpuDeviceGetBufferInfo");
+    fprintf(stderr, "(%p, ...) is not supported\n", hDevice);
+    return NvSuccess;
+}
+
+extern NvError NvRmGpuDeviceRegisterBuffer(NvRmGpuDevice *hDevice) {
+    fprintf(stderr, "nvrm_gpu_titanian: WARNING: NvRmGpuDeviceRegisterBuffer");
+    fprintf(stderr, "(%p, ...) is not supported\n", hDevice);
+    return NvSuccess;
+}
+
 extern NvError NvRmGpuTaskSchedulingGroupGetL2MaxWaysEvictLast(NvRmGpuDevice *hDevice, uint32_t* maxWays) {
     fprintf(stderr, "nvrm_gpu_titanian: WARNING: NvRmGpuTaskSchedulingGroupGetL2MaxWaysEvictLast");
     fprintf(stderr, "(%p, %p) is not supported\n", hDevice, maxWays);
