@@ -2,7 +2,10 @@
 set -x
 
 mkdir -p build
-$CC nvrm_gpu_titanian.c -shared -fPIC -o build/libnvrm_gpu_titanian.so
-$CC nvrm_host1x.c -shared -lnvrm_graphics -L/usr/lib/aarch64-linux-gnu/tegra -fPIC -o build/libnvrm_host1x.so
-$CC nvrm_mem.c -shared -lnvrm -fPIC -L/usr/lib/aarch64-linux-gnu/tegra -o build/libnvrm_mem.so
-$CC nvrm_sync.c -shared -lnvrm -fPIC -L/usr/lib/aarch64-linux-gnu/tegra -o build/libnvrm_sync.so
+gcc nvrm_gpu_titanian.c -shared -fPIC -o build/libnvrm_gpu_titanian.so
+gcc nvrm_host1x.c -shared -Wl,--no-as-needed -lnvrm_graphics -L/usr/lib/aarch64-linux-gnu/tegra -rdynamic -o build/libn
+vrm_sync.so
+gcc nvrm_mem.c -shared -Wl,--no-as-needed -lnvrm -L/usr/lib/aarch64-linux-gnu/tegra -rdynamic -o build/libn
+vrm_mem.so
+gcc nvrm_sync.c -shared -Wl,--no-as-needed -lnvrm -L/usr/lib/aarch64-linux-gnu/tegra -rdynamic -o build/libn
+vrm_sync.so
