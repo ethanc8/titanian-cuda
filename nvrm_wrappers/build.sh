@@ -1,4 +1,5 @@
 #!/bin/bash
+set +x
 
 mkdir -p build
 $CC nvrm_gpu_titanian.c -shared -fPIC -o build/libnvrm_gpu_titanian.so
