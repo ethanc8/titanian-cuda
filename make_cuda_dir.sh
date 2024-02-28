@@ -4,7 +4,7 @@ set -x
 mkdir -p build/cuda-11.4/lib
 wget https://repo.download.nvidia.com/jetson/t194/pool/main/n/nvidia-l4t-cuda/nvidia-l4t-cuda_34.1.1-20220516211757_arm64.deb
 dpkg-deb --raw-extract nvidia-l4t-cuda_34.1.1-20220516211757_arm64.deb build/nvidia-l4t-cuda
-wget https://repo.download.nvidia.com/jetson/t194/pool/main/n/nvidia-l4t-cuda/nvidia-l4t-3d-core_34.1.1-20220516211757_arm64.deb
+wget https://repo.download.nvidia.com/jetson/t194/pool/main/n/nvidia-l4t-3d-core/nvidia-l4t-3d-core_34.1.1-20220516211757_arm64.deb
 dpkg-deb --raw-extract nvidia-l4t-3d-core_34.1.1-20220516211757_arm64.deb build/nvidia-l4t-3d-core
 cp build/nvidia-l4t-cuda/usr/lib/aarch64-linux-gnu/tegra/* build/cuda-11.4/lib
 cp build/nvidia-l4t-cuda/usr/lib/aarch64-linux-gnu/tegra/nvrm* build/cuda-11.4/lib
