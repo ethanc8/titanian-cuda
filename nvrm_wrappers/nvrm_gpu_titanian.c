@@ -7,6 +7,12 @@ typedef enum {
     NvSuccess = NvError_Success,
 } NvError;
 
+extern NvError NvRmGpuTaskSchedulingGroupGetL2MaxWaysEvictLast(NvRmGpuDevice *hDevice, uint32_t* maxWays) {
+    fprintf(stderr, "nvrm_gpu_titanian: WARNING: NvRmGpuTaskSchedulingGroupGetL2MaxWaysEvictLast");
+    fprintf(stderr, "(%p, %p) is not supported\n", hDevice, maxWays);
+    return NvSuccess;
+}
+
 extern NvError NvRmGpuTaskSchedulingGroupSetL2MaxWaysEvictLast(NvRmGpuDevice *hDevice, uint32_t maxWays) {
     fprintf(stderr, "nvrm_gpu_titanian: WARNING: NvRmGpuTaskSchedulingGroupSetL2MaxWaysEvictLast");
     fprintf(stderr, "(%p, %"PRIu32") is not supported\n", hDevice, maxWays);
