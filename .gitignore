@@ -1,1 +1,7 @@
 **/build
+**/compile_commands.json
+**/.cache
+**/.clangd
+tests/cuDarkViewer/cuDarkViewer
+tests/cuDarkViewer/output
+tests/deviceQueryDrv/deviceQueryDrv
